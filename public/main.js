@@ -1,22 +1,21 @@
-// Saving the Foursquare API Info
+// FOURSQUARE API INFORMATION
 const clientId = 'NXLNJ2A1ALQC5KLICO1PP5ZIQH4E3DIXOS1KK2MBYCOJZM02'
 const clientSecret = 'FVRXTIGWMTVQ0LIP2WLDHRVOYJTVPFCWDYEHYT3WD0QLH24K';
-
 const near = "Phoenix,AZ"
-
 const url = `https://api.foursquare.com.v2/venues/explore?near=${near}&client_id=${clientId}&client_secret=${clientSecret}`
-//Documentation states that you can search with spaces Phoeniz, AZ
 
-// OpenWeather Info
+//WEATHERMAP API INFORMATION
 //Later Attempt with OAuth
-
-//Userless API calls
 //&client_id=XXXX&client_secret=XXXX
 
 //api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
 
 const openWeatherKey = '41e9373cf479659bae2f5d65fcac0291';
 const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${near}&appid=${openWeatherKey}}`;
+
+//In Case needed this is the url "https://api.openweathermap.org/data/2.5/weather"
+
+
 
 // Page Elements
 const $input = $('#city');
@@ -28,8 +27,9 @@ const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 // Add AJAX functions here:
-const getVenues = () => {
-
+//This turns the function into a named asynchronous function
+const getVenues = async function() => {
+  const city = $input.val();
 }
 
 const getForecast = () => {
